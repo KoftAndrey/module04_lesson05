@@ -4,7 +4,10 @@ const isPrime = (number) => {
   if (number <= 1) return false;
 
   for(let i = 2, root = Math.sqrt(number); i <= root; i++) {
-    if(number % i === 0) return false;
+    if(number % i === 0) {
+      return false;
+      break;
+    }
   }
 
   return true;
@@ -13,3 +16,5 @@ const isPrime = (number) => {
 const number = prompt(`Ведите число.`);
 
 isPrime(number) ? console.log(`Число ${number} является простым.`) : console.log(`Число ${number} не является простым.`);
+
+
