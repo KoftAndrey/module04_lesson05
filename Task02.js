@@ -1,16 +1,12 @@
 'use strict';
 
 const isPrime = (number) => {
-  if (number <= 1) {
-    return false;
-  } else {
-    for (let i = 2, root = Math.sqrt(number); i < root; i++) {
-      if (number % i === 0) {
-        return false;
-        break;
-      }
-    }
+  if (number <= 1) return false;
+
+  for(let i = 2, root = Math.sqrt(number); i <= root; i++) {
+    if(number % i === 0) return false;
   }
+
   return true;
 };
 
